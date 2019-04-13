@@ -7,19 +7,22 @@
   <link rel="stylesheet" href="./public/stylesheets/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
   <title>IH Characters</title>
 </head>
 <body>
+  <div id="map"></div>
+     
   <section class="container">
     <h1>Ironhack Characters API</h1>
-    <div class="characters-container">
-      <div class="character-info">
+    <div class="characters-container hidden">
+      <div class="character-info" id="template">
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
         <div class="cartoon">Is a Cartoon?</div>
         <div class="weapon">Character Weapon</div>
       </div>
+    </div>
+    <div class="characters-container" id="results">
     </div>
     <section class="operations">
       <div class="operation">
@@ -90,5 +93,7 @@
   </section>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXZ4MKbtTBlwEi4XeFazDPTPuxsM10GyY&callback=initMap"
+    async defer></script>
 </body>
 </html>
